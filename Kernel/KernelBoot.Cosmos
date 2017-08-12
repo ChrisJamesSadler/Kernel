@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43705efd-7558-4c31-8757-f11a1735045f}</ProjectGuid>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <Name>KernelBoot</Name>
+    <BinFormat>elf</BinFormat>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Profile>VMware</Profile>
+    <DebugEnabled>False</DebugEnabled>
+    <DebugMode>Source</DebugMode>
+    <TraceMode>User</TraceMode>
+    <EnableGDB>False</EnableGDB>
+    <StartCosmosGDB>false</StartCosmosGDB>
+    <VMWareEdition>Player</VMWareEdition>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Name>KernelBoot</Name>
+    <Description>Use VMware Player or Workstation to deploy and debug.</Description>
+    <Deployment>ISO</Deployment>
+    <Launch>VMware</Launch>
+    <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
+    <PxeInterface>192.168.1.10</PxeInterface>
+    <StackCorruptionDetectionEnabled>False</StackCorruptionDetectionEnabled>
+    <VMware_StackCorruptionDetectionEnabled>False</VMware_StackCorruptionDetectionEnabled>
+    <VMware_Name>KernelBoot</VMware_Name>
+    <VMware_Description>Use VMware Player or Workstation to deploy and debug.</VMware_Description>
+    <VMware_Deployment>ISO</VMware_Deployment>
+    <VMware_Launch>VMware</VMware_Launch>
+    <VMware_DebugEnabled>False</VMware_DebugEnabled>
+    <VMware_DebugMode>Source</VMware_DebugMode>
+    <VMware_VisualStudioDebugPort>Pipe: Cosmos\Serial</VMware_VisualStudioDebugPort>
+    <VMware_PxeInterface>192.168.1.10</VMware_PxeInterface>
+    <VMware_VMwareEdition>Player</VMware_VMwareEdition>
+    <VMware_OutputPath>bin\Debug\</VMware_OutputPath>
+    <VMware_EnableGDB>False</VMware_EnableGDB>
+    <VMware_StartCosmosGDB>false</VMware_StartCosmosGDB>
+    <Bochs_StackCorruptionDetectionEnabled>False</Bochs_StackCorruptionDetectionEnabled>
+    <Bochs_Name>KernelBoot</Bochs_Name>
+    <Bochs_Description>Use Bochs emulator to deploy and debug.</Bochs_Description>
+    <Bochs_Deployment>ISO</Bochs_Deployment>
+    <Bochs_Launch>Bochs</Bochs_Launch>
+    <Bochs_DebugEnabled>False</Bochs_DebugEnabled>
+    <Bochs_DebugMode>Source</Bochs_DebugMode>
+    <Bochs_VisualStudioDebugPort>Pipe: Cosmos\Serial</Bochs_VisualStudioDebugPort>
+    <Bochs_PxeInterface>192.168.1.10</Bochs_PxeInterface>
+    <Bochs_VMwareEdition>Player</Bochs_VMwareEdition>
+    <Bochs_OutputPath>bin\Debug\</Bochs_OutputPath>
+    <Bochs_EnableGDB>False</Bochs_EnableGDB>
+    <Bochs_StartCosmosGDB>false</Bochs_StartCosmosGDB>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include=".\Kernel.csproj">
+      <Name>Kernel</Name>
+      <Project>{67cffed6-ffb2-48f2-b725-3f2ec200dc5f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cosmos.Core.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983" />
+    <Reference Include="Cosmos.System.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983" />
+    <Reference Include="Cosmos.Debug.Kernel.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <Content Include="Cosmos.bxrc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>-->
+  <Import Project="$(MSBuildExtensionsPath)\Cosmos\Cosmos.targets" />
+</Project>

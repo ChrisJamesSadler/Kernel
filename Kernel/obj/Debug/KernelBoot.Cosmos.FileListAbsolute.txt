@@ -1,0 +1,2 @@
+C:\Users\User\Google Drive\Kernel\Kernel\obj\Debug\KernelBoot.CosmosResolveAssemblyReference.cache
+C:\Users\Chris\Google Drive\Kernel\Kernel\obj\Debug\KernelBoot.CosmosResolveAssemblyReference.cache

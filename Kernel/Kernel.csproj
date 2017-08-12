@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kernel</RootNamespace>
+    <AssemblyName>Kernel</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cosmos.Assembler">
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.Assembler.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Core.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.Core.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Core.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.Core.Plugs.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.HAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.HAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.IL2CPU">
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.IL2CPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.IL2CPU.Plugs">
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.IL2CPU.Plugs.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\Cosmos.System.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XSC">
+      <HintPath>..\..\..\AppData\Roaming\Cosmos User Kit\Build\VSIP\XSC.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="Application\Graphics\Bitmap.cs" />
+    <Compile Include="Application\Graphics\Button.cs" />
+    <Compile Include="Application\Graphics\Form.cs" />
+    <Compile Include="Application\Graphics\IControl.cs" />
+    <Compile Include="Application\Graphics\Label.cs" />
+    <Compile Include="Application\Graphics\Panel.cs" />
+    <Compile Include="Application\Graphics\Point.cs" />
+    <Compile Include="Application\Graphics\Rect.cs" />
+    <Compile Include="Application\Graphics\TextBox.cs" />
+    <Compile Include="Application\Input.cs" />
+    <Compile Include="Application\Login.cs" />
+    <Compile Include="Application\SCI.cs" />
+    <Compile Include="Application\SGI.cs" />
+    <Compile Include="Application\Shell.cs" />
+    <Compile Include="Application\Welcome.cs" />
+    <Compile Include="System\Audio\AudioMixer.cs" />
+    <Compile Include="System\Audio\AudioStream.cs" />
+    <Compile Include="System\Collections\BinaryMap.cs" />
+    <Compile Include="System\Collections\CircularBuffer.cs" />
+    <Compile Include="System\Core\GC.cs" />
+    <Compile Include="System\Drawing\GL.cs" />
+    <Compile Include="Application\Graphics\Theme.cs" />
+    <Compile Include="System\Drivers\Driver.cs" />
+    <Compile Include="System\Drivers\IDriver.cs" />
+    <Compile Include="System\Drivers\Other\BochsGraphicsAdaptor.cs" />
+    <Compile Include="System\Drivers\Other\PS2Keyboard.cs" />
+    <Compile Include="System\Drivers\Other\PS2Mouse.cs" />
+    <Compile Include="System\Drivers\Other\VideoGraphicsArray.cs" />
+    <Compile Include="System\Drivers\VMWare\NVIDIA9500MGS.cs" />
+    <Compile Include="System\Events\EventListener.cs" />
+    <Compile Include="System\Events\Event.cs" />
+    <Compile Include="System\HAL\ACPI.cs" />
+    <Compile Include="System\HAL\ATA\ATADiskDrive.cs" />
+    <Compile Include="System\HAL\CPU.cs" />
+    <Compile Include="System\HAL\DiskDrive.cs" />
+    <Compile Include="System\HAL\MBR.cs" />
+    <Compile Include="System\HAL\Partition.cs" />
+    <Compile Include="System\HAL\PIT.cs" />
+    <Compile Include="System\HAL\RTC.cs" />
+    <Compile Include="System\HAL\Speaker.cs" />
+    <Compile Include="System\Random.cs" />
+    <Compile Include="System\Settings.cs" />
+    <Compile Include="System\Core\Boot.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="System\Console.cs" />
+    <Compile Include="System\Core\Caller.cs" />
+    <Compile Include="System\Core\Ensure.cs" />
+    <Compile Include="System\Core\GDT.cs" />
+    <Compile Include="System\Core\Heap.cs" />
+    <Compile Include="System\Core\IDT.cs" />
+    <Compile Include="System\Core\ISR.cs" />
+    <Compile Include="System\Core\Label.cs" />
+    <Compile Include="System\Core\Multiboot.cs" />
+    <Compile Include="System\Core\PageManager.cs" />
+    <Compile Include="System\Core\Paging.cs" />
+    <Compile Include="System\Core\Scheduler.cs" />
+    <Compile Include="System\DateTime.cs" />
+    <Compile Include="System\HAL\PCI\PCI.cs" />
+    <Compile Include="System\HAL\PCI\PCIBaseAddressBar.cs" />
+    <Compile Include="System\HAL\PCI\PCIDevice.cs" />
+    <Compile Include="System\HAL\PCI\PCIDeviceBridge.cs" />
+    <Compile Include="System\HAL\PCI\PCIDeviceNormal.cs" />
+    <Compile Include="System\IO\IOPort.cs" />
+    <Compile Include="System\TextColour.cs" />
+    <Compile Include="System\Threading\SpinLock.cs" />
+    <Compile Include="System\Threading\Thread.cs" />
+    <Compile Include="System\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

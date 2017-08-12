@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kernel", "Kernel\Kernel.csproj", "{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}"
+EndProject
+Project("{471EC4BB-E47E-4229-A789-D1F5F83B52D4}") = "KernelBoot", "Kernel\KernelBoot.Cosmos", "{43705EFD-7558-4C31-8757-F11A1735045F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}.Debug|x86.ActiveCfg = Debug|x86
+		{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}.Debug|x86.Build.0 = Debug|x86
+		{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}.Release|x86.ActiveCfg = Release|x86
+		{67CFFED6-FFB2-48F2-B725-3F2EC200DC5F}.Release|x86.Build.0 = Release|x86
+		{43705EFD-7558-4C31-8757-F11A1735045F}.Debug|x86.ActiveCfg = Debug|x86
+		{43705EFD-7558-4C31-8757-F11A1735045F}.Debug|x86.Build.0 = Debug|x86
+		{43705EFD-7558-4C31-8757-F11A1735045F}.Release|x86.ActiveCfg = Debug|x86
+		{43705EFD-7558-4C31-8757-F11A1735045F}.Release|x86.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
